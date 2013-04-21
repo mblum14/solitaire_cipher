@@ -34,4 +34,9 @@ describe Cipher do
     cipher = Cipher.new('LBVJW SZKVL', 'DWJXH YRFDG')
     cipher.decrypt.should eql 'HELLO THERE'
   end
+
+  it "decodes a message" do
+    cipher = Cipher.new('CLEPK HHNIY CFPWH FDFEH', 'DWJXH YRFDG TMSHP UURXJ')
+    cipher.decrypt.should eql 'YOURC IPHER ISWOR KINGX'
+  end
 end
